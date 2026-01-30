@@ -1,93 +1,172 @@
 <div align="center" width="100%">
-<img
- src="https://i.imgur.com/Z3Dygty.png" alt="purecore.codes" />
+  <img src="https://i.imgur.com/Z3Dygty.png" alt="purecore.codes" />
 </div>
 
-A purecore nasceu da vontade de implementar ferramentas, que uso, de forma nativa e sem dependências externas. Por exemplo, a lib criada para que eu possa trocar do Express para a `@purecore/apify`, foi implementada com a mesma interface, para que só seja necessário a mudança do `import`. E para validar utilizei a lib helmet e funcionou de primeira. 
+A **purecore** nasceu da necessidade prática de construir as ferramentas que eu mesmo uso, de forma **nativa, controlada e sem dependências externas**.
 
-Mas como é uma lib muito simples preferi implementar para eliminar essa dependência externa, nesse momento defini que só iria criar projetos sem dependências, pois volta e meia caio em algum erro de versões de libs diferentes, logo se eu criar em um pacote só tudo que preciso eu nunca terei erro entre versões nem ficar vulnerável a ataques de supply chain. Fora que eu já tinha criado um gerenciador de pacotes para o Bun que salva sua dependência na sua pasta local e cria um link simbólico para a node_modules para nunca mais ter que baixar o mesmo pacote outra vez. 
+O primeiro exemplo disso foi a criação de uma biblioteca compatível com o Express, mas com implementação própria: ao migrar de `express` para `@purecore/apify`, a única mudança necessária foi o `import`.
+Para validar, utilizei a `helmet` como referência de comportamento — e funcionou de primeira.
 
-# Áreas de Pesquisa e Desenvolvimento 
+Como a biblioteca era simples, optei por reimplementar suas funcionalidades e **eliminar a dependência externa**. A partir daí, estabeleci um princípio:
+
+> **Todos os projetos da purecore devem ser dependency-free.**
+
+Isso resolve três problemas reais:
+
+* Conflitos de versão entre bibliotecas
+* Fragilidade causada por supply chain attacks
+* Dependência de decisões externas para manter meu próprio sistema funcionando
+
+Além disso, já existia um gerenciador de pacotes próprio para Bun, que:
+
+* Salva dependências localmente
+* Cria links simbólicos para `node_modules`
+* Evita downloads repetidos
+* Garante reprodutibilidade
+
+Com isso, a purecore evoluiu para um ecossistema onde:
+
+* Cada módulo é autocontido
+* O comportamento é previsível
+* A superfície de falha é mínima
+* A evolução é arquitetural, não acidental
+
+---
+
+# Áreas de Pesquisa e Desenvolvimento
 
 ## FullAgenticStack
 
-Após notar que estava usando Agents no Front-end, Back-end, Banco de dados e Infra, me veio um termo na cabeça bem semanticamente acurado: FullAgenticStack. Para encurtar eu usaria FAS dev, FAS-driven development, FAS System, etc. 
+Ao perceber que eu já utilizava agentes no:
 
+* Front-end
+* Back-end
+* Banco de dados
+* Infraestrutura
 
-## UI/UX
+surgiu um termo semanticamente preciso: **FullAgenticStack**.
+
+Derivações usadas:
+
+* FAS System
+* FAS-driven development
+* FAS Dev
+
+A proposta é tratar **agentes como unidades arquiteturais**, não apenas como features.
+
+---
+
+## UI / UX
 
 * Agentic UX
-* Adaptative UX
+* Adaptive UX
 * Progressive Disclosure
 
+Interfaces que:
+
+* Reagem ao contexto
+* Evoluem com o usuário
+* Exibem apenas o necessário
+
+---
 
 ## React / Tailwind
 
-* ComponentFactory by config/preset
-* Theme Factory by config/preset 
+* ComponentFactory via config/preset
+* ThemeFactory via config/preset
 * Behavior Animations
 
-## Natural Language 
+UI declarada por configuração, não por repetição manual.
 
-* CogGate - Cognitive Gateway para sistemas legados (projeto em desenvolvimento) 
-* NLToolFactory 
+---
+
+## Natural Language
+
+* **CogGate** — Cognitive Gateway para sistemas legados *(em desenvolvimento)*
+* NLToolFactory
 * NLAgentConfig
 * WhatsApp Chatbots
-* E-commerce Conversational 
-* Agents Web Conversationais
-* Análise Prosódica
+* E-commerce conversacional
+* Agentes Web conversacionais
+* Análise prosódica
 
-## Modelagem Comportamental 
+---
+
+## Modelagem Comportamental
 
 * BehaviorID
-* Estados Cognitivos 
+* Estados Cognitivos
 * Transições Cognitivas
 * Next Best Action
 
+Modelar **comportamento como sistema**, não como regra isolada.
+
+---
 
 ## Cognitive AI
 
+Pesquisa em sistemas cognitivos aplicados à arquitetura de software.
 
-## Memória para IA 
+---
 
+## Memória para IA
 
-## Multi-Agents 
+Estruturas de memória para agentes:
 
-* Reinforcement Learning 
+* Persistentes
+* Observáveis
+* Evolutivas
+
+---
+
+## Multi-Agents
+
+* Reinforcement Learning
 * Deep RL
-* Ensemble Learning 
+* Ensemble Learning
 
-### Atomic Behavior Agents 
+### Atomic Behavior Agents
 
+Agentes pequenos, verificáveis e composicionais.
 
-### Arquiteturas
+---
+
+## Arquiteturas
 
 * Self-driven systems
-* Self-healing systems  
-* Agentic MCP driven development 
-* Aspect Async Multi-Agents Event-driven development 
+* Self-healing systems
+* Agentic MCP-driven development
+* Aspect Async Multi-Agent Event-driven Development
 
-### Comunicação 
+---
 
-* Orquestração 
-* Coreografia 
-* sync/async
+## Comunicação
 
+* Orquestração
+* Coreografia
+* Sync / Async
 
-L 
+---
+
 ## Bancos de Dados
 
 * Reactive EntityAgent Data Access Layer
 
+Entidades como agentes ativos, não como registros passivos.
+
+---
+
 ## Segurança
 
-* Passwordless (se você ainda usa senha tenho péssimas notícias para você
-* Oauth2.1 com Token Ingestion
-* Zero trust com mTLS
-* 
+* Passwordless
+  *(se você ainda usa senha, tenho más notícias)*
+* OAuth2.1 com Token Ingestion
+* Zero Trust com mTLS
 
+---
 
+```html
 <div align="center" width="100%">
-<img src="https://i.imgur.com/rskx8Gw.png" alt="purecore.codes"
+  <img src="https://i.imgur.com/rskx8Gw.png" alt="purecore.codes" />
 </div>
-
+```
