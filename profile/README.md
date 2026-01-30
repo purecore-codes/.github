@@ -1,7 +1,6 @@
 <div align="center" width="100%">
 <img
  src="https://i.imgur.com/Z3Dygty.png" alt="purecore.codes" />
-  <h1><a style="color: red" href="https://purecore.codes" target="_blank">purecore.codes</h1>
 </div>
 
 A purecore nasceu da vontade de implementar ferramentas, que uso, de forma nativa e sem dependências externas. Por exemplo, a lib criada para que eu possa trocar do Express para a `@purecore/apify`, foi implementada com a mesma interface, para que só seja necessário a mudança do `import`. E para validar utilizei a lib helmet e funcionou de primeira. 
